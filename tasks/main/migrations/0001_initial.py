@@ -15,13 +15,14 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Performer',
             fields=[
-                ('name', models.CharField(max_length=50, primary_key=True, serialize=False)),
+                ('id', models.AutoField(primary_key=True, serialize=False)),
+                ('name', models.CharField(max_length=50)),
             ],
         ),
         migrations.CreateModel(
             name='Task',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.AutoField(primary_key=True, serialize=False)),
                 ('title', models.CharField(max_length=50)),
                 ('comment', models.CharField(max_length=100)),
                 ('priority', models.IntegerField(choices=[(1, 'Low'), (2, 'Moderate'), (3, 'High')], default=1)),
